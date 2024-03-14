@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/******************************************************************/
+/* CUSTOM PROPERTIES 
+/******************************************************************/
+
+@font-face {
+    font-family: "MontserratBold";
+    src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: "MontserratSemiBold";
+    src: url(../fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+  }
+
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: "MontserratRegular";
+    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
+  }
+
+:root{
+    /* H1 */
+    --FFBold: "MontserratBold";
+    --H1FS: 2rem;
+    
+    /* H2 */
+    --H2FS: 1.4rem;
+    --FFMedium: "MontserratMedium";
+
+    /* P*/
+    --PFS: 0.9rem;
+    --FFRegular: "MontserratRegular";
+    
+    /* Buttons */
+    --ButtonFS: 0.9rem;
+    --FFSemiBold: "MontserratSemiBold";
+
+    --Grey: rgba(245, 245, 245, 1);
+    --White: rgba(255, 255, 255, 1);
+    --Orange: rgba(251, 164, 29, 1);
+    --Brown: rgba(78, 53, 53, 1);
+}
+
+h1, h2, h3, h4, p{
+    color: var(--Brown);
+}
+
+h1{
+    font-family: var(--FFBold);
+    font-size: var(--H1FS);
+}
+
+h2{
+    font-family: var(--FFBold);
+    font-size: var(--H2FS);
+    line-height: 1.7rem; 
+    color: var(--Brown);
+}
+
+p{
+    font-family: var(--FFRegular);
+    font-size: var(--PFS); 
+    line-height: 1.5rem;
+}
+
+.atf a, .intro a{
+    background-color: var(--Orange);
+    color: var(--White);
+    border-radius: 100rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    width: fit-content;
+    font-family: var(--FFSemiBold);
+    font-size: var(--ButtonFS);
+    text-decoration: none;
+}
+
+img{
+    border-radius: 1em;
+}
+
+
+
+/******************************************************************/
+/* Header
+/******************************************************************/
+
+header{
+    background-color: rgb(195, 255, 0);
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: 6em;
+    border-bottom: 0.3rem solid rgb(236, 181, 181);
+    align-items: center;
+}
+
+/* Logo de Klok*/
+header nav a:first-child img{
+    width: 15rem;
+}
+
+/* Hamburger*/
+header nav a:nth-child(2) img{
+    width: 1.5rem;
+}
+
+/******************************************************************/
+/* Above the fold
+/******************************************************************/
+
+/* background*/
+.atf{
+    background-image: url("../images/home/atf.png");
+    height: calc(100vh - 6rem);
+    background-position: center; 
+    display: flex; 
+    flex-direction: column;
+}
+
+/* Titel + subtitel groep */
+.atf section:first-child{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    gap: 1rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+
+/* subtitel */
+.atf section h2{
+    width: 80%;
+    font-family: var(--FFMedium);
+    font-size: var(--H2FS); 
+}
+
+
+/******************************************************************/
+/* Intro text
+/******************************************************************/
+
+.intro{
+    background-color: var(--Grey);
+}
+
+/* Titel, bodytekst, button */
+.intro section:first-child {
+    padding: 6rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Titel */
+.intro section:first-child h2{
+    width: 80%;
+}
+
+/* Image */
+.intro img{
+   width: calc(100vw - 6rem);
+   margin:  3rem
+}
+
+/******************************************************************/
+/* img-row
+/******************************************************************/
+
+
+/* .img-row{
+    display: flex;
+}
+
+
+
+
+/******************************************************************/
+/* facilities
+/******************************************************************/
+
+/* .facilities{
+
+}
+
+.facilities ul{
+    background-color: aquamarine;
+    display: flex;
+   
+    flex-wrap: wrap;
+    margin: 1rem 3rem;
+    list-style: none;
+    gap: 1.5em
+}
+
+.facilities ul li{
+    flex-direction: row;
+}
+
+.facilities ul li img{
+    width: 2rem;
+ } */
