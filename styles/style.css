@@ -37,7 +37,7 @@
     --FFMedium: "MontserratMedium";
 
     /* H3 */
-    --H3FS: 1rem;
+    --H3FS: 1.1rem;
 
     /* P*/
     --PFS: 0.9rem;
@@ -83,7 +83,8 @@ p{
 
 .atf a, 
 .intro a,
-.facilities a{
+.facilities a,
+.blogs > a{
     background-color: var(--Orange);
     color: var(--White);
     border-radius: 100rem;
@@ -164,6 +165,8 @@ header nav a:nth-child(2) img{
 
 .intro{
     background-color: var(--Grey);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Titel, bodytekst, button */
@@ -253,3 +256,65 @@ header nav a:nth-child(2) img{
     margin-left: auto;
     margin-right: auto;
  }
+
+ /******************************************************************/
+/* Blogs - Deze section kan vgm makkelijker qua code?
+/******************************************************************/
+.blogs{
+    padding: 3rem;
+}
+
+ /* Blog01 */
+.blogs section{
+    display: flex; 
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: var(--Grey);
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+    margin: 2rem 0em;
+}
+
+.blogs img{
+    border-radius: 1rem 1rem 0 0;
+    height: 10rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+ }
+
+ /* Titel blogs */
+ .blogs span{
+    font-family: var(--FFRegular);
+    display: block;
+ }
+
+
+/* Teksten */
+ .blogs h3,
+ .blogs p,
+ .blogs section a{
+    padding: 0 2rem;
+ }
+
+/* Extra space na titel blog + na tekst */
+ .blogs h3, 
+ .blogs p:nth-of-type(2){
+    padding-bottom: 1rem;
+ }
+
+/* Titel */
+.blogs h3,
+.blogs h3 span{
+    font-family: var(--FFBold);
+}
+
+.blogs h3 span{
+    display: block;
+}
+
+
+
+
+
+
+ 
