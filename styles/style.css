@@ -36,6 +36,9 @@
     --H2FS: 1.4rem;
     --FFMedium: "MontserratMedium";
 
+    /* H3 */
+    --H3FS: 1rem;
+
     /* P*/
     --PFS: 0.9rem;
     --FFRegular: "MontserratRegular";
@@ -66,13 +69,21 @@ h2{
     color: var(--Brown);
 }
 
+h3{
+    font-size: var(--H3FS); 
+    font-family: var(--FFRegular);
+    line-height: 1.5rem;
+}
+
 p{
     font-family: var(--FFRegular);
     font-size: var(--PFS); 
     line-height: 1.5rem;
 }
 
-.atf a, .intro a{
+.atf a, 
+.intro a,
+.facilities a{
     background-color: var(--Orange);
     color: var(--White);
     border-radius: 100rem;
@@ -190,24 +201,55 @@ header nav a:nth-child(2) img{
 /* facilities
 /******************************************************************/
 
-/* .facilities{
 
+.facilities{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
+
 .facilities ul{
-    background-color: aquamarine;
     display: flex;
-   
     flex-wrap: wrap;
-    margin: 1rem 3rem;
-    list-style: none;
     gap: 1.5em
 }
 
+/* kan ik beter een padding geven om de hoogte te bepalen of height? */ 
 .facilities ul li{
-    flex-direction: row;
+    width: 100%;
+    height: 6rem;  
+    padding-left: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: row;  
+    background-color: var(--Grey);
+    border-radius: 1rem;
+    align-items: center;
+    
 }
 
+/* Icon */
 .facilities ul li img{
-    width: 2rem;
- } */
+    width: 1.8rem;
+    border-radius: 0;
+ }
+
+ /* Text Bold */
+ .facilities ul li span{
+    font-family: var(--FFBold);
+ }
+
+
+  /* 4de facility */
+ .facilities ul li:nth-of-type(4) h3{
+    width: 65%;
+    overflow-wrap: break-word;
+ }
+
+ /* Button */
+ .facilities a{
+    margin-left: auto;
+    margin-right: auto;
+ }
