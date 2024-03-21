@@ -140,31 +140,24 @@ header{
     padding: 0 3rem;
     width: 100%;
     
+    justify-content: space-between;
     box-sizing: border-box; 
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     background-color: rgb(93, 165, 165);
-   
     z-index: 1000;
+
 }
 
 /* Logo de Klok*/
 header a:first-child img{
     width: 15rem;
- 
-   
 }
-
-
 
 /* Hamburger*/
 header a:nth-child(2) img{
-  
     width: 1.5rem;
     border-radius: 0;
-   
 }
 
 /******************************************************************/
@@ -235,11 +228,21 @@ header a:nth-child(2) img{
 
 
 .img-row{
-    display: flex;
+
+
+    display: flex; /* plaatjes naast elkaar */
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    
 }
 
 .img-row img{
-    display: flex;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    scroll-snap-align: start;
 }
 
 
@@ -385,6 +388,7 @@ width: 60%;
 .contact{
     overflow-x: hidden;
     background-color: var(--Grey);
+
 }
 
 .contact{
@@ -396,14 +400,19 @@ width: 60%;
 }
 
 .contact p{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 65%;
 }
 
 .contact img{
     width: 13rem;
     mix-blend-mode: darken;
+    position: relative;
+    right: -12.8rem;
+    top: -18rem;
 }
+
+
 
 
  /******************************************************************/
