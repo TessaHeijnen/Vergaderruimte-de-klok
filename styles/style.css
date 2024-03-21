@@ -33,15 +33,19 @@
     --H1FS: 2rem;
     
     /* H2 */
-    --H2FS: 1.4rem;
+    --H2FS: 1.3rem;
     --FFMedium: "MontserratMedium";
 
     /* H3 */
     --H3FS: 1.1rem;
+    
 
     /* P*/
     --PFS: 0.9rem;
     --FFRegular: "MontserratRegular";
+
+    /* H4 */
+    --H4FS: 0.7rem;
     
     /* Buttons */
     --ButtonFS: 0.9rem;
@@ -75,6 +79,28 @@ h3{
     line-height: 1.5rem;
 }
 
+.footer-top h3{
+    color: var(--White);
+    font-family: var(--FFMedium);
+    letter-spacing: 0.1rem;
+}
+
+.footer-top p{
+    color: var(--White);
+    letter-spacing: 0.1rem;
+  
+}
+
+.footer-bottom h4,
+.footer-bottom a{
+    font-size: var(--H4FS); 
+    font-family: var(--FFRegular);
+    text-decoration: none;
+    color: var(--White);
+    letter-spacing: 0rem;
+}
+
+
 p{
     font-family: var(--FFRegular);
     font-size: var(--PFS); 
@@ -84,7 +110,9 @@ p{
 .atf a, 
 .intro a,
 .facilities a,
-.blogs > a{
+.blogs > a,
+.contact a:first-of-type
+{
     background-color: var(--Orange);
     color: var(--White);
     border-radius: 100rem;
@@ -107,23 +135,36 @@ img{
 /******************************************************************/
 
 header{
-    background-color: rgb(195, 255, 0);
+    position: fixed;
+    height: 6rem;
+    padding: 0 3rem;
+    width: 100%;
+    
+    box-sizing: border-box; 
     display: flex;
     flex-direction: row;
-    max-width: 100%;
-    height: 6em;
-    border-bottom: 0.3rem solid rgb(236, 181, 181);
+    justify-content: space-between;
     align-items: center;
+    background-color: rgb(93, 165, 165);
+   
+    z-index: 1000;
 }
 
 /* Logo de Klok*/
-header nav a:first-child img{
+header a:first-child img{
     width: 15rem;
+ 
+   
 }
 
+
+
 /* Hamburger*/
-header nav a:nth-child(2) img{
+header a:nth-child(2) img{
+  
     width: 1.5rem;
+    border-radius: 0;
+   
 }
 
 /******************************************************************/
@@ -133,10 +174,10 @@ header nav a:nth-child(2) img{
 /* background*/
 .atf{
     background-image: url("../images/home/atf.png");
-    height: calc(100vh - 6rem);
-    background-position: center; 
-    display: flex; 
-    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
 }
 
 /* Titel + subtitel groep */
@@ -167,11 +208,11 @@ header nav a:nth-child(2) img{
     background-color: var(--Grey);
     display: flex;
     flex-direction: column;
+    padding: 5rem 3rem 6rem 3rem;
 }
 
 /* Titel, bodytekst, button */
 .intro section:first-child {
-    padding: 6rem 3rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -185,7 +226,7 @@ header nav a:nth-child(2) img{
 /* Image */
 .intro img{
    width: calc(100vw - 6rem);
-   margin:  3rem
+   margin-top:  3rem
 }
 
 /******************************************************************/
@@ -193,7 +234,11 @@ header nav a:nth-child(2) img{
 /******************************************************************/
 
 
-/* .img-row{
+.img-row{
+    display: flex;
+}
+
+.img-row img{
     display: flex;
 }
 
@@ -206,7 +251,7 @@ header nav a:nth-child(2) img{
 
 
 .facilities{
-    padding: 3rem;
+    padding: 5rem 3rem 5rem 3rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -256,6 +301,28 @@ header nav a:nth-child(2) img{
     margin-left: auto;
     margin-right: auto;
  }
+
+ /******************************************************************/
+/* Reviews
+/******************************************************************/
+
+.reviews h2{
+padding: 3rem;
+width: 60%;
+}
+
+.reviews h2 span{
+    font-family: var(--FFRegular);
+}
+
+.reviews{
+    background-image: url("../images/home/atf.png");
+}
+
+.go4269172405{
+    display: none;
+    background-color: brown;
+}
 
  /******************************************************************/
 /* Blogs - Deze section kan vgm makkelijker qua code?
@@ -312,9 +379,144 @@ header nav a:nth-child(2) img{
     display: block;
 }
 
+ /******************************************************************/
+/* Contact
+/******************************************************************/
+.contact{
+    overflow-x: hidden;
+    background-color: var(--Grey);
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+   
+    gap: 1.5rem;
+    padding: 3rem;
+}
+
+.contact p{
+    margin-bottom: 2rem;
+    width: 65%;
+}
+
+.contact img{
+    width: 13rem;
+    mix-blend-mode: darken;
+}
+
+
+ /******************************************************************/
+/* Footer
+/******************************************************************/
+
+footer{
+    background-color:var(--Brown);
+}
 
 
 
+/* Bezoek + contact + kvk + socials + betalen */
+.footer-top{
+    padding: 3rem 3rem 0rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
 
 
- 
+
+/* Bezoek + contact + kvk*/
+.footer-top section:first-of-type ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* space between bezoekadres + contact*/
+.footer-top section:first-of-type ul li:nth-of-type(2),
+.footer-top section:first-of-type ul li:nth-of-type(4){
+    margin-bottom: 2rem;
+}
+
+/* space between h3 + li*/
+.footer-top section:first-of-type ul h3{
+    margin-bottom: 0.5rem;
+}
+
+
+/* Socials /******************************************************************/
+
+/* Socials title */
+.footer-top section:nth-of-type(2) h3{
+    margin-bottom: 0.5rem;
+}
+
+/* groep */
+.footer-top section:nth-of-type(2) ul:first-of-type{
+    display: flex;  
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* White circle */
+.footer-top section:nth-of-type(2) ul:first-of-type li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+/* Icon */
+.footer-top section:nth-of-type(2) ul:first-of-type li a img{
+    border-radius: 0;
+    width: 1.5rem;
+    display: block; 
+}
+
+/* Betalen /******************************************************************/
+
+.footer-top section:nth-of-type(2) ul:nth-of-type(2){
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.5rem;
+    width: 80%;
+
+}
+
+/* Icons bank */
+.footer-top section:nth-of-type(2) ul:nth-of-type(2) li img{
+    width: 3rem;
+    border-radius: 0;
+    display: block; 
+    margin: 0 auto; 
+}
+
+ /******************************************************************/
+/* Footer-Bottom
+/******************************************************************/
+
+
+
+.footer-bottom ul{
+    padding: 3rem 3rem;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around
+}
+
+.footer-bottom ul li:nth-of-type(6){
+    margin-top: 0.5rem;
+}
+
