@@ -1,6 +1,23 @@
+
+
 * {
-    padding: 0;
-    margin: 0;
+  margin: 0;
+}
+
+.body {
+    background-color: var(--Grey);
+}
+
+html,body{
+    overflow-x: clip;
+}
+
+/* 1100 */
+.max-width {
+  max-width: 1280px; 
+  padding: 6rem 2rem 6rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /******************************************************************/
@@ -8,524 +25,731 @@
 /******************************************************************/
 
 @font-face {
-    font-family: "MontserratBold";
-    src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
-  }
+  font-family: "MontserratBold";
+  src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
 
-  @font-face {
-    font-family: "MontserratSemiBold";
-    src: url(../fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-  }
+@font-face {
+  font-family: "MontserratSemiBold";
+  src: url(../fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
 
-  @font-face {
-    font-family: "MontserratMedium";
-    src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf);
-  }
+@font-face {
+  font-family: "MontserratMedium";
+  src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
 
-  @font-face {
-    font-family: "MontserratRegular";
-    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
-  }
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
 
-:root{
+:root {
+  /*************
+/* Fonts /* 
+/*************
+
     /* H1 */
-    --FFBold: "MontserratBold";
-    --H1FS: 2rem;
-    
-    /* H2 */
-    --H2FS: 1.3rem;
-    --FFMedium: "MontserratMedium";
+  --FFBold: "MontserratBold";
+  --H1FS: 2rem;
 
-    /* H3 */
-    --H3FS: 1.1rem;
-    
+  /* H2 */
+  --H2FS: 1.3rem;
+  --FFMedium: "MontserratMedium";
 
-    /* P*/
-    --PFS: 0.9rem;
-    --FFRegular: "MontserratRegular";
+  /* H3 */
+  --H3FS: 1.1rem;
 
-    /* H4 */
-    --H4FS: 0.7rem;
-    
-    /* Buttons */
-    --ButtonFS: 0.9rem;
-    --FFSemiBold: "MontserratSemiBold";
+  /* P*/
+  --PFS: 0.9rem;
+  --FFRegular: "MontserratRegular";
 
-    --Grey: rgba(245, 245, 245, 1);
-    --White: rgba(255, 255, 255, 1);
-    --Orange: rgba(251, 164, 29, 1);
-    --Brown: rgba(78, 53, 53, 1);
+  /* H4 */
+  --H4FS: 0.7rem;
+
+  /* Buttons */
+  --ButtonFS: 0.9rem;
+  --FFSemiBold: "MontserratSemiBold";
+
+  --Grey: rgba(245, 245, 245, 1);
+  --White: rgba(255, 255, 255, 1);
+  --Orange: rgba(251, 164, 29, 1);
+  --Brown: rgba(78, 53, 53, 1);
 }
 
-h1, h2, h3, h4, p{
-    color: var(--Brown);
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--Brown);
 }
 
-h1{
-    font-family: var(--FFBold);
-    font-size: var(--H1FS);
+h1 {
+  font-family: var(--FFBold);
+  font-size: var(--H1FS);
 }
 
-h2{
-    font-family: var(--FFBold);
-    font-size: var(--H2FS);
-    line-height: 1.7rem; 
-    color: var(--Brown);
+h2 {
+  font-family: var(--FFBold);
+  font-size: var(--H2FS);
+  line-height: 1.7rem;
+  color: var(--Brown);
 }
 
-h3{
-    font-size: var(--H3FS); 
-    font-family: var(--FFRegular);
-    line-height: 1.5rem;
+h3 {
+  font-size: var(--H3FS);
+  font-family: var(--FFRegular);
+  line-height: 1.5rem;
 }
 
-.footer-top h3{
-    color: var(--White);
-    font-family: var(--FFMedium);
-    letter-spacing: 0.1rem;
-}
-
-.footer-top p{
-    color: var(--White);
-    letter-spacing: 0.1rem;
-  
+.footer-top h3 {
+  color: var(--White);
+  font-family: var(--FFMedium);
+  letter-spacing: 0.1rem;
 }
 
 .footer-bottom h4,
-.footer-bottom a{
-    font-size: var(--H4FS); 
-    font-family: var(--FFRegular);
-    text-decoration: none;
-    color: var(--White);
-    letter-spacing: 0rem;
+.footer-bottom a {
+  font-size: var(--H4FS);
+  font-family: var(--FFRegular);
+  text-decoration: none;
+  color: var(--White);
+  letter-spacing: 0rem;
 }
 
-
-p{
-    font-family: var(--FFRegular);
-    font-size: var(--PFS); 
-    line-height: 1.5rem;
+.footer-top p {
+  color: var(--White);
+  letter-spacing: 0.1rem;
 }
 
-.atf a, 
+p {
+  font-family: var(--FFRegular);
+  font-size: var(--PFS);
+  line-height: 1.5rem;
+}
+
+/*************
+/* Orange Buttons /* 
+/************* */
+.atf a,
 .intro a,
 .facilities a,
 .blogs > a,
-.contact a:first-of-type
-{
-    background-color: var(--Orange);
-    color: var(--White);
-    border-radius: 100rem;
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    width: fit-content;
-    font-family: var(--FFSemiBold);
-    font-size: var(--ButtonFS);
-    text-decoration: none;
-}
-
-img{
-    border-radius: 1em;
+.contact a:first-of-type {
+  background-color: var(--Orange);
+  color: var(--White);
+  border-radius: 100rem;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  width: fit-content;
+  font-family: var(--FFSemiBold);
+  font-size: var(--ButtonFS);
+  text-decoration: none;
 }
 
 
 
+/*************
+/* Links /* 
+/************* */
+
+/* Lees verder + veelgestelde vragen links*/
+.contact a:nth-of-type(2),
+.blogs section a:last-child {
+  color: var(--Brown);
+  padding: 0;
+  font-size: var(--PFS);
+  font-family: var(--FFMedium);
+  
+}
+
+/*************
+/* Afbeeldingen /* 
+/************* */
+
+/* alle afb. afgeronde hoeken*/
+img {
+  border-radius: 1em;
+}
+
+/*************
+/* background /* 
+/************* */
+
+.grey-bg {
+  background-color: var(--Grey);
+}
+
 /******************************************************************/
-/* Header
+/* Header /*    /* Header /*    /* Header /*    /* Header /*
 /******************************************************************/
 
-header{
-    position: fixed;
-    height: 6rem;
-    padding: 0 3rem;
-    width: 100%;
-    
-    justify-content: space-between;
-    box-sizing: border-box; 
-    display: flex;
-    align-items: center;
-    background-color: rgb(93, 165, 165);
-    z-index: 1000;
+header {
+  position: fixed;
+  height: 6rem;
+  padding: 0 2rem;
+  width: 100%;
 
+  justify-content: space-between;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: red solid 2px;
+  z-index: 1000;
 }
 
 /* Logo de Klok*/
-header a:first-child img{
-    width: 15rem;
+header a:first-child img {
+  width: 15rem;
 }
 
 /* Hamburger*/
-header a:nth-child(2) img{
-    width: 1.5rem;
-    border-radius: 0;
+header a:nth-child(2) img {
+  width: 1.5rem;
+  border-radius: 0;
 }
 
 /******************************************************************/
-/* Above the fold
+/* Above the fold */ /* Above the fold */ /* Above the fold */ /* Above the fold */
 /******************************************************************/
 
 /* background*/
-.atf{
-    background-image: url("../images/home/atf.png");
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
+.atf {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 40%,
+      rgba(245, 245, 245, 1)
+    ),
+    url("../images/home/atf.png");
+
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Titel + subtitel groep */
-.atf section:first-child{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    margin-top: auto;
-    gap: 1rem;
-    padding: 3rem;
-    text-align: center;
+.atf section:first-child {
+    width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  gap: 1rem;
+padding-bottom: 2rem;
+  text-align: center;
 }
-
 
 /* subtitel */
-.atf section h2{
-    width: 80%;
-    font-family: var(--FFMedium);
-    font-size: var(--H2FS); 
+.atf section h2 {
+  width: 80%;
+  font-family: var(--FFMedium);
+  font-size: var(--H2FS);
 }
 
-
 /******************************************************************/
-/* Intro text
+/* Intro text */ /* Intro text */ /* Intro text */
 /******************************************************************/
 
-.intro{
-    background-color: var(--Grey);
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 3rem 6rem 3rem;
+.intro {
+  background-color: var(--Grey);
 }
 
 /* Titel, bodytekst, button */
 .intro section:first-child {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Titel */
-.intro section:first-child h2{
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 /* Image */
-.intro img{
-   width: calc(100vw - 6rem);
-   margin-top:  3rem
+.intro img {
+  width: 100%;
+  margin-top: 4rem;
 }
 
 /******************************************************************/
-/* img-row
+/* img-row */ /* img-row */ /* img-row */ /* img-row */
 /******************************************************************/
-
-
-.img-row{
-
-
-    display: flex; /* plaatjes naast elkaar */
-    flex-direction: row;
-    gap: 1rem;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    
+.img-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  background-color: rgb(239, 218, 218);
+  width: max-content;
 }
 
-.img-row img{
-    width: 15rem;
-    height: 15rem;
-    object-fit: cover;
-    scroll-snap-align: start;
+.img-row img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  scroll-snap-align: center;
 }
-
-
-
 
 /******************************************************************/
-/* facilities
+/* facilities */ /* facilities */ /* facilities */
 /******************************************************************/
-
-
-.facilities{
-    padding: 5rem 3rem 5rem 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.facilities {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-
-.facilities ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em
+.facilities ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  padding: 0;
 }
 
-/* kan ik beter een padding geven om de hoogte te bepalen of height? */ 
-.facilities ul li{
-    width: 100%;
-    height: 6rem;  
-    padding-left: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    flex-direction: row;  
-    background-color: var(--Grey);
-    border-radius: 1rem;
-    align-items: center;
-    
+.facilities ul li {
+  width: 100%;
+  height: 6rem;
+  padding: 0 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: row;
+  background-color: var(--Grey);
+  border-radius: 1rem;
+  align-items: center;
+  text-wrap: wrap;
 }
 
 /* Icon */
-.facilities ul li img{
-    width: 1.8rem;
-    border-radius: 0;
- }
+.facilities ul li img {
+  width: 1.8rem;
+  border-radius: 0;
+}
 
- /* Text Bold */
- .facilities ul li span{
-    font-family: var(--FFBold);
- }
+/* Text Bold */
+.facilities ul li span {
+  font-family: var(--FFBold);
+}
 
+/* 4de facility */
+.facilities ul li:nth-of-type(4) h3 {
+  width: 65%;
+  overflow-wrap: break-word;
+}
 
-  /* 4de facility */
- .facilities ul li:nth-of-type(4) h3{
-    width: 65%;
-    overflow-wrap: break-word;
- }
+/* Button */
+.facilities a {
+  margin-left: auto;
+  margin-right: auto;
+}
 
- /* Button */
- .facilities a{
-    margin-left: auto;
-    margin-right: auto;
- }
-
- /******************************************************************/
-/* Reviews
+/******************************************************************/
+/* Reviews */ /* Reviews */ /* Reviews */ /* Reviews */
 /******************************************************************/
 
-.reviews h2{
-padding: 3rem;
-width: 60%;
+/* auteursrecht logo */
+.go4269172405 {
+  display: none !important;
 }
 
-.reviews h2 span{
-    font-family: var(--FFRegular);
+.go316439965 {
+  padding-top: 0 !important;
 }
 
-.reviews{
-    background-image: url("../images/home/atf.png");
+.reviews h2 {
+  padding: 2rem;
 }
 
-.go4269172405{
+.reviews h2 span {
+  font-family: var(--FFRegular);
+}
+
+.reviews {
+  background-image: url("../images/home/atf.png");
+}
+
+.go4269172405 {
+  display: none;
+  background-color: brown;
+}
+
+/******************************************************************/
+/* Blogs */ /* Blogs */ /* Blogs */ /* Blogs */ /* Blogs */
+/******************************************************************/
+
+
+/* Blog01 */
+.blogs section section {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: var(--Grey);
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+  margin: 2rem 0em;
+}
+
+.blogs section > section:nth-child(n+2):nth-child(-n+3){
     display: none;
-    background-color: brown;
 }
 
- /******************************************************************/
-/* Blogs - Deze section kan vgm makkelijker qua code?
-/******************************************************************/
-.blogs{
-    padding: 3rem;
+.blogs section img {
+  border-radius: 1rem 1rem 0 0;
+  height: 10rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
- /* Blog01 */
-.blogs section{
-    display: flex; 
-    flex-direction: column;
-    border-radius: 1rem;
-    background-color: var(--Grey);
-    gap: 0.5rem;
-    padding-bottom: 2rem;
-    margin: 2rem 0em;
+/* Titel blogs */
+.blogs span {
+  font-family: var(--FFRegular);
+  display: block;
 }
-
-.blogs img{
-    border-radius: 1rem 1rem 0 0;
-    height: 10rem;
-    object-fit: cover;
-    margin-bottom: 1rem;
- }
-
- /* Titel blogs */
- .blogs span{
-    font-family: var(--FFRegular);
-    display: block;
- }
-
 
 /* Teksten */
- .blogs h3,
- .blogs p,
- .blogs section a{
-    padding: 0 2rem;
- }
+.blogs h3,
+.blogs p,
+.blogs section a:last-child {
+  padding: 0 2rem;
+}
 
 /* Extra space na titel blog + na tekst */
- .blogs h3, 
- .blogs p:nth-of-type(2){
-    padding-bottom: 1rem;
- }
+.blogs h3,
+.blogs p:nth-of-type(2) {
+  padding-bottom: 1rem;
+}
 
 /* Titel */
 .blogs h3,
-.blogs h3 span{
-    font-family: var(--FFBold);
+.blogs h3 span {
+  font-family: var(--FFBold);
 }
 
-.blogs h3 span{
-    display: block;
+.blogs h3 span {
+  display: block;
 }
 
- /******************************************************************/
-/* Contact
 /******************************************************************/
-.contact{
-    overflow-x: hidden;
-    background-color: var(--Grey);
-
-}
-
-.contact{
-    display: flex;
-    flex-direction: column;
-   
-    gap: 1.5rem;
-    padding: 3rem;
-}
-
-.contact p{
-    margin-bottom: 1rem;
-    width: 65%;
-}
-
-.contact img{
-    width: 13rem;
-    mix-blend-mode: darken;
-    position: relative;
-    right: -12.8rem;
-    top: -18rem;
-}
-
-
-
-
- /******************************************************************/
-/* Footer
+/* Contact */ /* Contact */ /* Contact */ /* Contact */
 /******************************************************************/
 
-footer{
-    background-color:var(--Brown);
+.contact {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  overflow-x: hidden;
+  background-color: var(--Grey);
+  position: relative;
 }
 
+.contact section:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  
+}
 
+.contact.max-width > section > h2 + p {
+  width: 63%;
+  margin-bottom: 2rem;
+}
+
+.contact.max-width > section > section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  left: 0;
+}
+
+.contact img {
+  width: 13rem;
+  mix-blend-mode: darken;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0rem;
+  right: -1.5rem;
+}
+
+.contact a{
+    z-index: 1;
+}
+
+/******************************************************************/
+/* Footer */ /* Footer */ /* Footer */ /* Footer */
+/******************************************************************/
+
+footer {
+  background-color: var(--Brown);
+}
 
 /* Bezoek + contact + kvk + socials + betalen */
-.footer-top{
-    padding: 3rem 3rem 0rem 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
-
-
 
 /* Bezoek + contact + kvk*/
-.footer-top section:first-of-type ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
+.footer-top section:first-of-type ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
-
 
 /* space between bezoekadres + contact*/
 .footer-top section:first-of-type ul li:nth-of-type(2),
-.footer-top section:first-of-type ul li:nth-of-type(4){
-    margin-bottom: 2rem;
+.footer-top section:first-of-type ul li:nth-of-type(4) {
+  margin-bottom: 2rem;
 }
 
 /* space between h3 + li*/
-.footer-top section:first-of-type ul h3{
-    margin-bottom: 0.5rem;
+.footer-top section:first-of-type ul h3 {
+  margin-bottom: 0.5rem;
 }
-
 
 /* Socials /******************************************************************/
 
 /* Socials title */
-.footer-top section:nth-of-type(2) h3{
-    margin-bottom: 0.5rem;
+.footer-top section:nth-of-type(2) h3 {
+  margin-bottom: 0.5rem;
 }
 
 /* groep */
-.footer-top section:nth-of-type(2) ul:first-of-type{
-    display: flex;  
-    flex-direction: row;
-    list-style: none;
-    gap: 2rem;
-    margin-bottom: 2rem;
+.footer-top section:nth-of-type(2) ul:first-of-type {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 0;
 }
 
 /* White circle */
-.footer-top section:nth-of-type(2) ul:first-of-type li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: var(--White);
+.footer-top section:nth-of-type(2) ul:first-of-type li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--White);
 }
 
 /* Icon */
-.footer-top section:nth-of-type(2) ul:first-of-type li a img{
-    border-radius: 0;
-    width: 1.5rem;
-    display: block; 
+.footer-top section:nth-of-type(2) ul:first-of-type li a img {
+  border-radius: 0;
+  width: 1.5rem;
+  display: block;
 }
 
 /* Betalen /******************************************************************/
 
-.footer-top section:nth-of-type(2) ul:nth-of-type(2){
-    display: flex;  
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 0.5rem;
-    width: 80%;
-
+.footer-top section:nth-of-type(2) ul:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5rem;
+  padding: 0;
 }
 
 /* Icons bank */
-.footer-top section:nth-of-type(2) ul:nth-of-type(2) li img{
-    width: 3rem;
-    border-radius: 0;
-    display: block; 
-    margin: 0 auto; 
+.footer-top section:nth-of-type(2) ul:nth-of-type(2) li img {
+  width: 3rem;
+  border-radius: 0;
+  display: block;
+  margin: 0 auto;
 }
 
- /******************************************************************/
-/* Footer-Bottom
+/******************************************************************/
+/* Footer-Bottom */ /* Footer-Bottom */ /* Footer-Bottom */
 /******************************************************************/
 
+.footer-bottom ul {
+  padding: 3rem 3rem;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  gap: 0.8rem;
+}
 
+/******************************************************************/
+/* Media Queries Desktop */ /* Media Queries   /* Media Queries
+/******************************************************************/
 
-.footer-bottom ul{
-    padding: 3rem 3rem;
-    flex-wrap: wrap;
+@media only screen and (min-width: 1080px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2,
+  .atf section h2 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 2.2rem;
+  }
+
+  /* ATF */ /* ATF */ /* ATF */ /* ATF /* ATF */ /* ATF */
+  /* ATF */ /* ATF */ /* ATF */ /* ATF /* ATF */ /* ATF */
+
+  .atf section h2 {
+    width: 100%;
+  }
+
+    /* Titel + subtitel groep */
+    .atf section:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    /* Button */
+    .atf a{
+        display: none;
+    }
+    
+    
+
+  /* Intro */ /* Intro */ /* Intro */ /* Intro /* Intro */ /* Intro */
+  /* Intro */ /* Intro */ /* Intro */ /* Intro /* Intro */ /* Intro */
+
+  /* Alles */
+  .intro {
     display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-around
+    flex-direction: row-reverse;
+    gap: 5rem;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Tekst + button */
+  .intro section:first-child {
+    gap: 2rem;
+  }
+
+  /* Image */
+  .intro img {
+    width: 50%;
+    height: 32rem;
+    margin-top: 0;
+    object-fit: cover;
+    object-position: -6rem;
+  }
+
+ /* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */ 
+/* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */ 
+
+.facilities{
+    gap: 3rem;
+}
+.facilities ul{
+    gap: 2rem;
+}
+  
+  .facilities ul li {
+    width: calc(33.33% - 8rem);
+    flex-grow: 1; 
+  }
+  
+  /* 4de facility */
+  .facilities ul li:nth-of-type(4) h3 {
+    width: 70%;
+  }
+  
+  /* Button */
+  .facilities a {
+    margin-right: 0;
+  }
+
+  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */ 
+    /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */ 
+
+    .blogs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .blogs h2{
+        text-align: center;
+    }
+
+    .blogs section > section:nth-child(n+2):nth-child(-n+3){
+        display: flex;
+    }
+
+    .blogs section{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem
+    }
+
+
+      /* Contact */ /* Contact */ /* Contact */ /* Contact /* Contact */ 
+        /* Contact */ /* Contact */ /* Contact */ /* Contact /* Contact */ 
+
+
+    .contact{
+        padding: 8rem 0;
+    }
+
+    .contact img{
+    width: 18rem;
+    }
+
+    .contact.max-width > section > section {
+        flex-direction: row-reverse;
+        gap: 2rem;
+    }
+
+    .contact a:nth-of-type(2){
+        background-color: var(--Brown);
+        color: var(--White);
+        border-radius: 100rem;
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        width: fit-content;
+        font-family: var(--FFSemiBold);
+        font-size: var(--ButtonFS);
+        text-decoration: none;
+    }
+
+
+
+
+
 }
 
-.footer-bottom ul li:nth-of-type(6){
-    margin-top: 0.5rem;
+@media only screen and (max-width: 1080px){
+
+h2{
+    background-color: red;
 }
 
+
+
+}
