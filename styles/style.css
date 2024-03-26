@@ -1,20 +1,19 @@
-
-
 * {
   margin: 0;
 }
 
 .body {
-    background-color: var(--Grey);
+  background-color: var(--Grey);
 }
 
-html,body{
-    overflow-x: clip;
+html,
+body {
+  overflow-x: clip;
 }
 
 /* 1100 */
 .max-width {
-  max-width: 1280px; 
+  max-width: 1280px;
   padding: 6rem 2rem 6rem 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -115,7 +114,7 @@ h3 {
   font-family: var(--FFRegular);
   text-decoration: none;
   color: var(--White);
-  letter-spacing: 0rem;
+  letter-spacing: 0.05rem;
 }
 
 .footer-top p {
@@ -148,8 +147,6 @@ p {
   text-decoration: none;
 }
 
-
-
 /*************
 /* Links /* 
 /************* */
@@ -161,7 +158,6 @@ p {
   padding: 0;
   font-size: var(--PFS);
   font-family: var(--FFMedium);
-  
 }
 
 /*************
@@ -186,23 +182,35 @@ img {
 /******************************************************************/
 
 header {
+  /* background-color: var(--White); */
+  background-color: var(--White);
   position: fixed;
-  height: 6rem;
-  padding: 0 2rem;
   width: 100%;
+  border-bottom: #D0D0D0 solid 0.2em;
+}
 
-  justify-content: space-between;
-  box-sizing: border-box;
+header .max-width{
+  padding-top: 0;
+  padding-bottom: 0;
+  
+}
+
+header .max-width > section{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+  height: 6rem;
+  width: 100%;
+  
+  justify-content: space-between;
   align-items: center;
-  background-color: white;
-  border-bottom: red solid 2px;
-  z-index: 1000;
+
 }
 
 /* Logo de Klok*/
 header a:first-child img {
-  width: 15rem;
+  width: 13rem;
 }
 
 /* Hamburger*/
@@ -232,13 +240,13 @@ header a:nth-child(2) img {
 
 /* Titel + subtitel groep */
 .atf section:first-child {
-    width: 70%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: auto;
   gap: 1rem;
-padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -316,7 +324,7 @@ padding-bottom: 2rem;
   background-color: var(--Grey);
   border-radius: 1rem;
   align-items: center;
-  text-wrap: wrap;
+  /* text-wrap: wrap; */
 }
 
 /* Icon */
@@ -355,16 +363,16 @@ padding-bottom: 2rem;
   padding-top: 0 !important;
 }
 
-.reviews h2 {
+.reviews section h2 {
   padding: 2rem;
 }
 
-.reviews h2 span {
+.reviews section h2 span {
   font-family: var(--FFRegular);
 }
 
 .reviews {
-  background-image: url("../images/home/atf.png");
+  background-image: url("../images/home/atf.png") ;
 }
 
 .go4269172405 {
@@ -372,10 +380,11 @@ padding-bottom: 2rem;
   background-color: brown;
 }
 
+
+
 /******************************************************************/
 /* Blogs */ /* Blogs */ /* Blogs */ /* Blogs */ /* Blogs */
 /******************************************************************/
-
 
 /* Blog01 */
 .blogs section section {
@@ -388,13 +397,13 @@ padding-bottom: 2rem;
   margin: 2rem 0em;
 }
 
-.blogs section > section:nth-child(n+2):nth-child(-n+3){
-    display: none;
+.blogs section > section:nth-child(n + 2):nth-child(-n + 3) {
+  display: none;
 }
 
 .blogs section img {
   border-radius: 1rem 1rem 0 0;
-  height: 10rem;
+  height: 14rem;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -438,9 +447,10 @@ padding-bottom: 2rem;
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: var(--Grey);
   position: relative;
+ 
 }
 
 .contact section:first-of-type {
@@ -461,7 +471,7 @@ padding-bottom: 2rem;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   left: 0;
 }
 
@@ -474,8 +484,8 @@ padding-bottom: 2rem;
   right: -1.5rem;
 }
 
-.contact a{
-    z-index: 1;
+.contact a {
+  z-index: 1;
 }
 
 /******************************************************************/
@@ -504,8 +514,8 @@ footer {
 }
 
 /* space between bezoekadres + contact*/
-.footer-top section:first-of-type ul li:nth-of-type(2),
-.footer-top section:first-of-type ul li:nth-of-type(4) {
+.footer-top section:first-of-type ul li:nth-of-type(3),
+.footer-top section:first-of-type ul li:nth-of-type(6) {
   margin-bottom: 2rem;
 }
 
@@ -514,15 +524,21 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* Direct naar /******************************************************************/
+
+.footer-top section:nth-of-type(2) {
+  display: none;
+}
+
 /* Socials /******************************************************************/
 
 /* Socials title */
-.footer-top section:nth-of-type(2) h3 {
+.footer-top section:nth-of-type(3) h3 {
   margin-bottom: 0.5rem;
 }
 
 /* groep */
-.footer-top section:nth-of-type(2) ul:first-of-type {
+.footer-top section:nth-of-type(3) ul:first-of-type {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -532,7 +548,7 @@ footer {
 }
 
 /* White circle */
-.footer-top section:nth-of-type(2) ul:first-of-type li {
+.footer-top section:nth-of-type(3) ul:first-of-type li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -543,7 +559,7 @@ footer {
 }
 
 /* Icon */
-.footer-top section:nth-of-type(2) ul:first-of-type li a img {
+.footer-top section:nth-of-type(3) ul:first-of-type li a img {
   border-radius: 0;
   width: 1.5rem;
   display: block;
@@ -551,17 +567,17 @@ footer {
 
 /* Betalen /******************************************************************/
 
-.footer-top section:nth-of-type(2) ul:nth-of-type(2) {
+.footer-top section:nth-of-type(3) ul:nth-of-type(2) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 0;
 }
 
 /* Icons bank */
-.footer-top section:nth-of-type(2) ul:nth-of-type(2) li img {
+.footer-top section:nth-of-type(3) ul:nth-of-type(2) li img {
   width: 3rem;
   border-radius: 0;
   display: block;
@@ -572,15 +588,26 @@ footer {
 /* Footer-Bottom */ /* Footer-Bottom */ /* Footer-Bottom */
 /******************************************************************/
 
+.footer-bottom{
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .footer-bottom ul {
-  padding: 3rem 3rem;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   list-style: none;
   justify-content: center;
   gap: 0.8rem;
+  padding-left: 0;
 }
+
+
 
 /******************************************************************/
 /* Media Queries Desktop */ /* Media Queries   /* Media Queries
@@ -588,27 +615,58 @@ footer {
 
 @media only screen and (min-width: 1080px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .atf h2 {
+    letter-spacing: 0.1rem;
   }
 
   h2,
   .atf section h2 {
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
   }
 
   h3 {
     font-size: 1.3rem;
   }
 
-  h4 {
-    font-size: 1.4rem;
+  .footer-bottom h4 {
+    font-size: 1.1rem;
   }
 
   p {
     font-size: 1.15rem;
     line-height: 2.2rem;
   }
+
+.atf a,
+.intro a,
+.facilities a,
+.blogs > a,
+.contact a:first-of-type {
+  font-size: 1.15rem;
+}
+
+
+.blogs section a:last-child {
+  font-size: 1.15rem;
+}
+
+
+  /* header */ /* header */ /* header */ /* header /* header */ /* header */
+  /* header */ /* header */ /* header */ /* header /* header */ /* header */
+
+header .max-width > section{
+  height: 8rem;
+}
+
+/* Logo de Klok*/
+header a:first-child img {
+  width: 22rem;
+}
 
   /* ATF */ /* ATF */ /* ATF */ /* ATF /* ATF */ /* ATF */
   /* ATF */ /* ATF */ /* ATF */ /* ATF /* ATF */ /* ATF */
@@ -617,20 +675,27 @@ footer {
     width: 100%;
   }
 
-    /* Titel + subtitel groep */
-    .atf section:first-child {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-    }
+  /* Titel + subtitel groep */
+  .atf section:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-bottom: 10rem;
+  }
 
-    /* Button */
-    .atf a{
-        display: none;
-    }
-    
-    
+  /* Button */
+  .atf a {
+    display: none;
+  }
+
+  .atf {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 30%,
+        rgba(245, 245, 245, 1)
+      ),
+      url("../images/home/atf.png");
+  }
 
   /* Intro */ /* Intro */ /* Intro */ /* Intro /* Intro */ /* Intro */
   /* Intro */ /* Intro */ /* Intro */ /* Intro /* Intro */ /* Intro */
@@ -641,8 +706,6 @@ footer {
     flex-direction: row-reverse;
     gap: 5rem;
     align-items: center;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   /* Tekst + button */
@@ -659,89 +722,176 @@ footer {
     object-position: -6rem;
   }
 
- /* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */ 
-/* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */ 
+  /* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */
+  /* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */
 
-.facilities{
+  .facilities {
     gap: 3rem;
-}
-.facilities ul{
+  }
+  .facilities ul {
     gap: 2rem;
-}
-  
+  }
+
   .facilities ul li {
     width: calc(33.33% - 8rem);
-    flex-grow: 1; 
+    flex-grow: 1;
   }
-  
+
   /* 4de facility */
   .facilities ul li:nth-of-type(4) h3 {
     width: 70%;
   }
-  
+
   /* Button */
   .facilities a {
     margin-right: 0;
   }
 
-  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */ 
-    /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */ 
+  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */
+  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */
 
-    .blogs{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
+  /* Titel + blogs + button onder elkaar */
+  .blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 
-    .blogs h2{
-        text-align: center;
-    }
+  /* Titel */
+  .blogs h2 {
+    text-align: center;
+  }
 
-    .blogs section > section:nth-child(n+2):nth-child(-n+3){
-        display: flex;
-    }
+  /* Blog 2+3 zichtbaar */
+  .blogs section > section:nth-child(n + 2):nth-child(-n + 3) {
+    display: flex;
+  }
 
-    .blogs section{
-        display: flex;
-        flex-direction: row;
-        gap: 2rem
-    }
+  /* Blogs groep */
+  .blogs section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
 
+  /* Contact */ /* Contact */ /* Contact */ /* Contact /* Contact */
+  /* Contact */ /* Contact */ /* Contact */ /* Contact /* Contact */
 
-      /* Contact */ /* Contact */ /* Contact */ /* Contact /* Contact */ 
-        /* Contact */ /* Contact */ /* Contact */ /* Contact /* Contact */ 
+  /* extra space section */
+  .contact {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 
-
-    .contact{
-        padding: 8rem 0;
-    }
-
-    .contact img{
+  /* contactpersoon */
+  .contact img {
     width: 18rem;
-    }
+  }
 
-    .contact.max-width > section > section {
-        flex-direction: row-reverse;
-        gap: 2rem;
-    }
+  /* Buttons */
+  .contact.max-width > section > section {
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
 
-    .contact a:nth-of-type(2){
-        background-color: var(--Brown);
-        color: var(--White);
-        border-radius: 100rem;
-        display: inline-block;
-        padding: 1rem 2.5rem;
-        width: fit-content;
-        font-family: var(--FFSemiBold);
-        font-size: var(--ButtonFS);
-        text-decoration: none;
-    }
+  /* Button brown */
+  .contact a:nth-of-type(2) {
+    background-color: var(--Brown);
+    color: var(--White);
+    border-radius: 100rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    width: fit-content;
+    font-family: var(--FFSemiBold);
+    font-size: 1.15rem;
+    text-decoration: none;
+    
+  }
+
+  /* Footer */ /* Footer */ /* Footer */ /* Footer /* Footer */
+  /* Footer */ /* Footer */ /* Footer */ /* Footer /* Footer */
+
+  /* 3x section row */
+  .footer-top {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+  }
+
+  /* show direct naar */
+  .footer-top section:nth-of-type(2) {
+    display: flex;
+  }
+
+  /* opmaak direct naar */
+  .footer-top section:nth-of-type(2) ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    padding: 0;
+  }
+
+  /* extra space socials en betalen */
+  .footer-top section:nth-of-type(3) ul:first-of-type {
+    margin-bottom: 4rem;
+  }
+
+  /* space tussen icons betalen */
+  .footer-top section:nth-of-type(3) ul:nth-of-type(2) {
+    gap: 1.2rem;
+  }
+
+  .footer-top section:nth-of-type(3) ul:first-of-type li a img {
+    width: 2rem;
+  }
+
+  /* icons betalen groter */
+  .footer-top section:nth-of-type(3) ul:nth-of-type(2) li img {
+    width: 4.2rem;
+  }
+
+  /* White circle */
+  .footer-top section:nth-of-type(3) ul:first-of-type li {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  /* space tussen h3 + icons */
+  .footer-top section:nth-of-type(3) h3 {
+    margin-bottom: 1rem;
+  }
+
+  /* Footer-bottom */ /* Footer-bottom */ /* Footer-bottom */ /* Footer-bottom */
 
 
+  .footer-bottom{
+    display: flex;
+    flex-direction: row-reverse;
+   justify-content: space-between;
+  }
 
+  .footer-bottom ul {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+ 
+  display: flex;
+  flex-direction: row-reverse;
 
+  
+  gap: 0.8rem;
+}
 
+.footer-bottom ul li{
+  justify-content: flex-end;
+}
+
+  .footer-bottom ul li:last-child {
+   justify-content: flex-start;
+  }
 }
 
 /* @media only screen and (max-width: 1080px){
