@@ -19,6 +19,14 @@ body {
   margin-right: auto;
 }
 
+
+
+
+
+
+
+
+
 /******************************************************************/
 /* CUSTOM PROPERTIES 
 /******************************************************************/
@@ -187,6 +195,7 @@ header {
   position: fixed;
   width: 100%;
   border-bottom: #D0D0D0 solid 0.2em;
+  z-index: 2;
 }
 
 header .max-width{
@@ -200,7 +209,7 @@ header .max-width > section{
   flex-direction: row;
   justify-content: center;
  
-  height: 6rem;
+  height: 4.5rem;
   width: 100%;
   
   justify-content: space-between;
@@ -240,13 +249,13 @@ header a:nth-child(2) img {
 
 /* Titel + subtitel groep */
 .atf section:first-child {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: auto;
   gap: 1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
 
@@ -255,6 +264,7 @@ header a:nth-child(2) img {
   width: 80%;
   font-family: var(--FFMedium);
   font-size: var(--H2FS);
+  margin-bottom: 2rem;
 }
 
 /******************************************************************/
@@ -281,22 +291,41 @@ header a:nth-child(2) img {
 /******************************************************************/
 /* img-row */ /* img-row */ /* img-row */ /* img-row */
 /******************************************************************/
-.img-row {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  background-color: rgb(239, 218, 218);
-  width: max-content;
+/* external css: flickity.css */
+
+
+
+.gallery {
+  background: linear-gradient(rgb(245, 245, 245) 50%, #ffffff 50%);
+  /* padding: 0;
+  padding: -20%; */
 }
 
-.img-row img {
-  width: 12rem;
-  height: 12rem;
-  object-fit: cover;
-  scroll-snap-align: center;
+.gallery-cell{
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 1rem;
+  counter-increment: gallery-cell;
+
 }
+
+.gallery img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.flickity-prev-next-button{
+  display: none !important;
+}
+
+.dot{
+  background-color: var(--Brown) !important;
+}
+
+
 
 /******************************************************************/
 /* facilities */ /* facilities */ /* facilities */
@@ -339,10 +368,10 @@ header a:nth-child(2) img {
 }
 
 /* 4de facility */
-.facilities ul li:nth-of-type(4) h3 {
-  width: 65%;
+/* .facilities ul li:nth-of-type(4) h3 {
+  width: 75%;
   overflow-wrap: break-word;
-}
+} */
 
 /* Button */
 .facilities a {
@@ -359,12 +388,13 @@ header a:nth-child(2) img {
   display: none !important;
 }
 
-.go316439965 {
-  padding-top: 0 !important;
+.reviews .max-width{
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 .reviews section h2 {
-  padding: 2rem;
+  padding-bottom: 2rem;
 }
 
 .reviews section h2 span {
@@ -375,10 +405,6 @@ header a:nth-child(2) img {
   background-image: url("../images/home/atf.png") ;
 }
 
-.go4269172405 {
-  display: none;
-  background-color: brown;
-}
 
 
 
@@ -447,18 +473,19 @@ header a:nth-child(2) img {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background-color: var(--Grey);
   position: relative;
- 
+
 }
 
+/* Tekst + buttons */
 .contact section:first-of-type {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
-  
+
 }
 
 .contact.max-width > section > h2 + p {
@@ -466,24 +493,26 @@ header a:nth-child(2) img {
   margin-bottom: 2rem;
 }
 
+/* button + link*/
 .contact.max-width > section > section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  /* position: relative; */
+  position: relative;
   left: 0;
 }
 
 .contact img {
   width: 13rem;
   mix-blend-mode: darken;
-  object-fit: cover;
+  /* object-fit: cover; */
   position: absolute;
   bottom: 0rem;
   right: -1.5rem;
 }
 
+/* button */
 .contact a {
   z-index: 1;
 }
@@ -584,6 +613,11 @@ footer {
   margin: 0 auto;
 }
 
+.footer-top a {
+  text-decoration: none;
+}
+
+
 /******************************************************************/
 /* Footer-Bottom */ /* Footer-Bottom */ /* Footer-Bottom */
 /******************************************************************/
@@ -595,7 +629,13 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  border-top: white 1px solid;
 }
+
+
+
+  
+
 
 .footer-bottom ul {
   flex-wrap: wrap;
@@ -609,13 +649,14 @@ footer {
 
 
 
+
 /******************************************************************/
 /* Media Queries Desktop */ /* Media Queries   /* Media Queries
 /******************************************************************/
 
 @media only screen and (min-width: 1080px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     letter-spacing: 0.1rem;
   }
 
@@ -625,8 +666,8 @@ footer {
 
   h2,
   .atf section h2 {
-    font-size: 2.5rem;
-    line-height: 3.2rem;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
   }
 
   h3 {
@@ -660,12 +701,12 @@ footer {
   /* header */ /* header */ /* header */ /* header /* header */ /* header */
 
 header .max-width > section{
-  height: 8rem;
+  height: 6rem;
 }
 
 /* Logo de Klok*/
 header a:first-child img {
-  width: 22rem;
+  width: 17rem;
 }
 
   /* ATF */ /* ATF */ /* ATF */ /* ATF /* ATF */ /* ATF */
@@ -681,7 +722,7 @@ header a:first-child img {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    padding-bottom: 10rem;
+    padding-bottom: 7rem;
   }
 
   /* Button */
@@ -745,6 +786,19 @@ header a:first-child img {
   /* Button */
   .facilities a {
     margin-right: 0;
+  }
+
+  /* Reviews */ /* Reviews */ /* Reviews */ /* Reviews /* Reviews */
+  /* Reviews */ /* Reviews */ /* Reviews */ /* Reviews /* Reviews */
+
+
+  .reviews .max-width{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .reviews section h2 {
+    padding-bottom: 4rem;
   }
 
   /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */

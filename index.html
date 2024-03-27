@@ -9,6 +9,7 @@
 
     <link href="styles/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
   </head>
 
   <body> 
@@ -50,13 +51,15 @@
         </section>
       </section>
 
-      <!-- <section class="img-row"> 
-        <img src="images/home/imgrow01_04.png" alt="x">
-        <img src="images/home/imgrow02.png" alt="x">
-        <img src="images/home/imgrow03.png" alt="x">
-        <img src="images/home/imgrow01_04.png" alt="x">
-        <img src="images/home/imgrow05.jpg" alt="x">
-      </section> -->
+      <section class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell"><img src="images/home/imgrow01_04.png" alt="Aantal personen icoon"></div>
+        <div class="gallery-cell"><img src="images/home/imgrow02.png" alt="Aantal personen icoon"></div>
+        <div class="gallery-cell"><img src="images/home/imgrow03.png" alt="Aantal personen icoon"></div>
+        <div class="gallery-cell"><img src="images/home/imgrow05.jpg" alt="Aantal personen icoon"></div>
+        <div class="gallery-cell"><img src="images/home/imgrow01_04.png" alt="Aantal personen icoon"></div>
+      </section>   
+
+
 
       <section class="facilities max-width">
         <h2>De faciliteiten</h2>
@@ -171,11 +174,11 @@
           <section>
             <ul>
               <li><h3>Bezoekadres</h3></li>
-              <li><p>Praktische info</p></li>
-              <li><p>Impressie</p></li>
-              <li><p>Tarieven info</p></li>
-              <li><p>Contact</p></li>
-              <li><p>Veelgestelde vragen</p></li>
+              <li><a href="x"><p>Praktische info</p></a></li>
+              <li><a href="x"><p>Impressie</p></a></li>
+              <li><a href="x"><p>Tarieven info</p></a></li>
+              <li><a href="x"><p>Contact</p></a></li>
+              <li><a href="x"><p>Veelgestelde vragen</p></a></li>
             </ul>
           </section>
 
@@ -207,9 +210,13 @@
             <li><a href="x"><h4>Sitemap</h4></a></li>
           </ul>
           <h4>Vergaderruimte De Klok © All rights reserved</h4>
+        </section>
       </footer>
     </main>
 
+    
     <script defer src="x"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    <script id="rendered-js"></script>
   </body>
 </html>
