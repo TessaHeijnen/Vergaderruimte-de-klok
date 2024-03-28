@@ -293,7 +293,9 @@ header a:nth-child(2) img {
 /******************************************************************/
 /* external css: flickity.css */
 
-
+.gallery-dt{
+display: none;
+}
 
 .gallery {
   background: linear-gradient(rgb(245, 245, 245) 50%, #ffffff 50%);
@@ -571,7 +573,7 @@ footer {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
   padding: 0;
 }
@@ -581,8 +583,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: var(--White);
 }
@@ -590,7 +592,7 @@ footer {
 /* Icon */
 .footer-top section:nth-of-type(3) ul:first-of-type li a img {
   border-radius: 0;
-  width: 1.5rem;
+  width: 1rem;
   display: block;
 }
 
@@ -607,7 +609,7 @@ footer {
 
 /* Icons bank */
 .footer-top section:nth-of-type(3) ul:nth-of-type(2) li img {
-  width: 3rem;
+  width: 2.5rem;
   border-radius: 0;
   display: block;
   margin: 0 auto;
@@ -689,6 +691,15 @@ footer {
 .blogs > a,
 .contact a:first-of-type {
   font-size: 1.15rem;
+  border: solid 2px var(--Grey) ;
+  transition: background-color 2s ease-out 10ms;
+}
+
+.intro a:hover{
+  background-color: var(--Grey);
+  color: var(--Orange);
+  border: solid 2px red ;
+  animation: backwards;
 }
 
 
@@ -747,6 +758,7 @@ header a:first-child img {
     flex-direction: row-reverse;
     gap: 5rem;
     align-items: center;
+    padding-bottom: 12rem;
   }
 
   /* Tekst + button */
@@ -763,11 +775,45 @@ header a:first-child img {
     object-position: -6rem;
   }
 
+  /* Img-row */ /* Img-row */ /* Img-row */ /* Img-row /* Img-row */
+  /* Img-row */ /* Img-row */ /* Img-row */ /* Img-row /* Img-row */
+
+  .gallery {
+    display: none;
+  }
+
+  .gallery-dt{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    background: linear-gradient(rgb(245, 245, 245) 50%, #ffffff 50%);
+  }
+  
+  .gallery-dt img{
+    max-width: calc(20% - 2rem); /* 20% breedte voor elke afbeelding met 2rem marge ertussen */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .gallery-dt img:first-child{
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0;
+  }
+
+  .gallery-dt img:nth-child(5){
+    border-top-right-radius: 0; 
+    border-bottom-right-radius: 0;
+  }
+
+  
+
   /* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */
   /* facilities */ /* facilities */ /* facilities */ /* facilities /* facilities */
 
   .facilities {
     gap: 3rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
   }
   .facilities ul {
     gap: 2rem;
@@ -801,8 +847,8 @@ header a:first-child img {
     padding-bottom: 4rem;
   }
 
-  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */
-  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs */
+  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs *//* blogs */
+  /* blogs */ /* blogs */ /* blogs */ /* blogs /* blogs *//* blogs */
 
   /* Titel + blogs + button onder elkaar */
   .blogs {
