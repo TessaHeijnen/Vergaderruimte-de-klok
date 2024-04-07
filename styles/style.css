@@ -220,6 +220,11 @@ header .max-width > section{
 /* Logo de Klok*/
 header a:first-child img {
   width: 13rem;
+  border-radius: 0;
+}
+
+header a:first-child{
+  height: 41.4922px;
 }
 
 /* Hamburger*/
@@ -304,9 +309,9 @@ display: none;
 }
 
 .gallery-cell{
-  width: 66%;
+  width: 56%;
   height: 200px;
-  margin-right: 10px;
+  margin-right: 30px;
   border-radius: 1rem;
   counter-increment: gallery-cell;
 
@@ -325,6 +330,7 @@ display: none;
 
 .dot{
   background-color: var(--Brown) !important;
+
 }
 
 
@@ -631,11 +637,17 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  border-top: white 1px solid;
+
 }
 
+.footer-border{
+  padding: 1rem 2em 1rem 2rem;
 
+}
 
+.footer-border section{
+  border-top: white 1px solid;
+}
   
 
 
@@ -647,6 +659,7 @@ footer {
   justify-content: center;
   gap: 0.8rem;
   padding-left: 0;
+
 }
 
 
@@ -655,6 +668,10 @@ footer {
 /******************************************************************/
 /* Media Queries Desktop */ /* Media Queries   /* Media Queries
 /******************************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+
+}
 
 @media only screen and (min-width: 1080px) {
   h1 {
